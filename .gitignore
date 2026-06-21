@@ -47,3 +47,8 @@ keys/private/
 *.sig.private
 *.seed
 .env
+
+# Stage354 public docs key-ledger outputs
+!docs/keys/
+!docs/keys/*.json
+!docs/keys/*.txt
