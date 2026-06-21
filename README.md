@@ -28,3 +28,42 @@ Stage353 extends Stage352 by recording the Stage352 verification result into a t
 ## Safety Boundary
 
 Stage353 does not publish private keys, raw secrets, fake signature claims, external Rekor claims, or Bitcoin anchor claims.
+
+---
+
+## Stage354: Signature Key Rotation Ledger Layer
+
+Stage354 adds a signature key lifecycle and rotation ledger on top of Stage353.
+
+It records safe public metadata for:
+
+- GPG
+- Sigstore OIDC
+- Ed25519 witness
+- PQC ML-DSA intent
+
+Stage354 also binds the Stage178 framework:
+
+- Assumption
+- Threat Model
+- Guarantee
+
+### Safety Boundary
+
+Stage354 does not publish:
+
+- private keys
+- raw secrets
+- seed material
+- real PQC private key material
+- fake active PQC key claims
+- fake external Rekor claims
+
+### Current Decision
+
+```text
+accept_policy_initialization
+
+This means the key rotation policy ledger was initialized safely,
+but no real production key rotation is being falsely claimed.
+

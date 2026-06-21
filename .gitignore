@@ -31,3 +31,19 @@ intelligence/
 
 !docs/audit/
 !docs/audit/stage350-transparency-log.json
+
+# Stage354 private/core safety
+core/
+private_core/
+private/
+secrets/
+keys/private/
+*.pem
+*.key
+*.p12
+*.pfx
+*.asc
+*.gpg
+*.sig.private
+*.seed
+.env
